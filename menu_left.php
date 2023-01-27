@@ -24,6 +24,14 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-header">Systems</li>
                 <li class="nav-item">
+                    <a href="<?php echo PATH; ?>/store/po" class="nav-link">
+                        <i class="nav-icon fa fa-edit"></i>
+                        <p>
+                            ใบแจ้งซื้อ (Purchase Order)
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="<?php echo PATH; ?>/store/rr" class="nav-link">
                         <i class="nav-icon fa fa-truck"></i>
                         <p>
@@ -37,6 +45,14 @@
                         <i class="nav-icon fa fa-cube"></i>
                         <p>
                             วัสดุพื้นฐาน (Inventory)
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo PATH; ?>/store/supplier" class="nav-link">
+                        <i class="nav-icon fa fa-cube"></i>
+                        <p>
+                            ผู้ขาย (Supplier)
                         </p>
                     </a>
                 </li>
@@ -73,8 +89,8 @@
                 </li>
                 <li class="nav-header">Data</li>
                 <li class="nav-item">
-                    <a href="<?php echo PATH; ?>/sale/so" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                    <a href="<?php echo PATH; ?>/sale/patient" class="nav-link">
+                        <i class="nav-icon fa fa-address-card"></i>
                         <p>
                             ข้อมูลคนไข้ (Patient)
                         </p>

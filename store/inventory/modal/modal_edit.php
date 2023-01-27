@@ -8,7 +8,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form name="frmEditStock" id="frmEditStock" method="POST" style="padding:10px;" action="javascript:void(0);">
+            <form name="frmEditStock" id="frmEditStock" method="POST" style="padding:10px;"
+                action="javascript:void(0);">
                 <div class="modal-body">
                     <div class="row">
                         <div class="form-group col-lg-3 col-6">
@@ -46,6 +47,15 @@
                             <input type="text" class="form-control" name="stname1" id="stname1" required>
                         </div>
 
+                        
+                        <div class="form-group col-lg-3 col-6">
+                            <label for="recipient-name" class="col-form-label">ประเภทสินค้า</label>
+                            <select class="form-control" name="typecode" id="typecode">
+                                <option value="กรอบแว่น">กรอบแว่น</option>
+                                <option value="ขาแว่น">ขาแว่น</option>
+                            </select>
+
+                        </div>
                         <div class="form-group col-lg-3 col-6">
                             <label for="recipient-name" class="col-form-label">ราคาขาย</label>
                             <div class="input-group mb-3">
@@ -55,20 +65,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-3 col-6">
-                                <label for="recipient-name" class="col-form-label">สถานะการใช้งาน</label>
-                                <select class="form-control" name="status" id="status">                                    
-                                    <option value="Y">เปิดการใช้งาน</option>
-                                    <option value="N">ปิดการใช้งาน</option>
-                                </select>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-9 col-12">
+                            <label class="col-form-label">รายละเอียดของสินค้า</label>
+                            <input type="text" class="form-control" name="stdetail" id="stdetail" >
+                        </div>
+                        <div class="form-group col-lg-3 col-12">
+                            <label for="recipient-name" class="col-form-label">สถานะการใช้งาน</label>
+                            <select class="form-control" name="status" id="status">
+                                <option value="Y">เปิดการใช้งาน</option>
+                                <option value="N">ปิดการใช้งาน</option>
+                            </select>
 
-                            </div>
+                        </div>
                     </div>
                     <input type="hidden" id="code" name="code">
                     <div class="modal-footer">
                         <div class="col text-center">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-                            <button type="submit" id="btnEditSo" form="frmEditStock" class="btn btn-primary">แก้ไข</button>
+                            <button type="submit" id="btnEditSo" form="frmEditStock"
+                                class="btn btn-primary">แก้ไข</button>
                         </div>
                     </div>
                 </div>
