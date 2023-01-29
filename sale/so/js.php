@@ -7,33 +7,57 @@ $(function() {
 
     $.ajax({
         type: "POST",
-        url: "ajax/get_supplier.php",
-
+        url: "ajax/get_so.php",
         success: function(result) {
+            var supstatus, suptitle;
 
-            for (count = 0; count < result.code.length; count++) {
-
-                $('#table_id tbody').append(
-                    '<tr data-toggle="modal" data-dismiss="modal"  id="' + result
-                    .supcode[count] + '" onClick="onClick_tr(this.id,\'' + result.supname[
-                        count] + '\',\'' + result.address[count] + '\');"><td>' + result.code[
-                        count] + '</td><td>' +
-                    result.supcode[count] + '</td><td>' +
-                    result.supname[count] + '</td></tr>');
+            for (count = 0; count < result.socode.length; count++) {
 
 
+                if (result.supstatus[count] == '01') {
+                    supstatus = 'รออนุมัติขาย'
+                    suptitle = 'รออนุมัติขาย'
+                } else if (result.supstatus[count] == '02') {
+                    supstatus = 'รอออกใบกำกับภาษี'
+                    suptitle = 'รอออกใบกำกับภาษี'
+                } else if (result.supstatus[count] == '03') {
+                    supstatus = 'รอยืนยันส่งสินค้า'
+                    suptitle = 'รอยืนยันส่งสินค้า'
+                } else if (result.supstatus[count] == '04') {
+                    supstatus = 'สมบูรณ์';
+                    suptitle = 'สมบูรณ์';
+                } else if (result.supstatus[count] == 'C') {
+                    supstatus = 'ยกเลิกการใช้งาน'
+                    suptitle = 'ยกเลิกการใช้งาน'
+                } else if (result.supstatus[count] == 'N') {
+                    supstatus = 'ยังส่งของไม่ครบ'
+                    suptitle = 'ยังส่งของไม่ครบ'
+                }
+                sodate = result
+                    .sodate[count].substring(8) + '-' + result
+                    .sodate[count].substring(5, 7) + '-' + result
+                    .sodate[count].substring(0, 4);
+
+                $('#tableSO').append(
+                    '<tr id="' + result.socode[
+                        count] + '" onClick="onSelectSO(this.id);" ><td>' + result.socode[count] +
+                    '</td><td>' + sodate + '</td><td>' + result
+                    .cusname[count] + '</td><td>'+result.stcode[count] +' '+ result.stname1[count] + '</td><td>' + formatMoney(result
+                    .price[count],2) + '</td><td><span title="' + suptitle + '">พนักงานขายคนที่ '+[count+1]+'</span></td></tr>');
             }
 
-            $('#table_id').DataTable({
-                "dom": '<"pull-left"f>rt<"bottom"p><"clear">',
-                "ordering": true
-            });
+            var table = $('#tableSO').DataTable({
+                "dom": '<"pull-right"f>rt<"bottom"p><"clear">',
+                "order": [],
+                "pageLength": 20
+            })
 
 
             $(".dataTables_filter input[type='search']").attr({
-                size: 40,
-                maxlength: 40
+                size: 60,
+                maxlength: 60
             });
+
         }
     });
 

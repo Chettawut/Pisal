@@ -11,16 +11,11 @@ $(function() {
 
             for (count = 0; count < result.code.length; count++) {
 
-                let status
-                if(result.status[count]=='Y')
-                status = 'เปิดใช้งาน'
-                else
-                status = 'ปิดใช้งาน'
                 $('#tableSupplier').append(
                     '<tr data-toggle="modal" data-target="#modal_edit" id="' + result
                     .code[
                         count] + '" data-whatever="' + result.code[
-                        count] + '"><td>' + result.cuscode[count] + '</td><td>' + result.cusname[count] + '</td><td>' + result.idno[count] + '</td><td>' + result.code[count] + '</td><td  style="text-align:center">' + status + '</td></tr>');
+                        count] + '"><td>' + result.cuscode[count] + '</td><td>' + result.cusname[count] + '</td><td>' + result.tel[count] + '</td><td>' + result.s_date[count] + '</td><td  >' + result.s_date[count] + '</td></tr>');
             }
 
             var table = $('#tableSupplier').DataTable({

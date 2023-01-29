@@ -27,7 +27,7 @@
                     <a href="<?php echo PATH; ?>/store/po" class="nav-link">
                         <i class="nav-icon fa fa-edit"></i>
                         <p>
-                            ใบแจ้งซื้อ (Purchase Order)
+                            ใบสั่งซื้อ (Purchase Order)
                         </p>
                     </a>
                 </li>
@@ -83,7 +83,7 @@
                     <a href="<?php echo PATH; ?>/sale/so" class="nav-link">
                         <i class="nav-icon fas fa-file-invoice"></i>
                         <p>
-                            ออกบิลขาย (Sale Order)
+                            บิลขาย (Sale Order)
                         </p>
                     </a>
                 </li>

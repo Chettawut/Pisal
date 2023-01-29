@@ -8,7 +8,7 @@ include_once('../../conn.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ผู้ขาย</title>
+    <title>ผู้ขาย (Supplier)</title>
 
     <?php 
     include_once('css.php'); 
@@ -38,7 +38,7 @@ include_once('../../conn.php');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">ผู้ขาย</h1>
+                            <h1 class="m-0">ผู้ขาย (Supplier)</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">

@@ -59,7 +59,7 @@ include_once('../../conn.php');
                                     <div class="btn-group" id="btnAddSO" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-success" data-toggle="modal"
                                             data-target="#modal_add"><i class="fa fa fa-tags" aria-hidden="true"></i>
-                                            เพิ่มผู้ขาย</button>
+                                            เพิ่มข้อมูลคนไข้</button>
                                         <button type="button" id="btnRefresh" class="btn btn-primary"><i
                                                 class="fas fa-sync-alt" aria-hidden="true"></i> Refresh</button>
                                     </div>
@@ -78,11 +78,12 @@ include_once('../../conn.php');
                             <table name="tableSupplier" id="tableSupplier" class="table table-bordered table-striped">
                                 <thead style=" background-color:#D6EAF8;">
                                     <tr>
-                                        <th width="10%">รหัสผู้ขาย</th>
-                                        <th width="40%">ชื่อผู้ขาย</th>
-                                        <th width="20%">จังหวัด</th>
-                                        <th width="20%">ที่อยู่</th>
-                                        <th width="10%" style="text-align:center">สถานะการใช้งาน</th>
+                                        <th width="10%">รหัสคนไข้</th>
+                                        <th width="30%">ชื่อ-นามสกุล</th>
+                                        <th width="20%">เบอร์โทรติดต่อ</th>
+                                        <th width="20%">วันที่ใช้บริการล่าสุด</th>
+                                        <th width="20%">วันที่สมัคร</th>
+                                        
 
                                     </tr>
                                 </thead>
